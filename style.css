@@ -1,0 +1,20 @@
+/* nav img {
+    height: 50px;
+} */
+
+.nav-copy{
+    padding:14px 36px ;
+    border: 10px;
+    
+    
+}
+.nav-copy img {
+    height: 30px;
+}
+
+.hero-section h1 {
+    font-size: 40px;
+}
+.hero-section h2 {
+    font-size: 20px;
+}
