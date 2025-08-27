@@ -7,19 +7,27 @@ function heartCount (id){
 
 
 // heart reuseable 
-function hear
 
-
-document.getElementById("heart-click").addEventListener('click',function(){
-
-    document.getElementById("heart-click").style.color = 'red'
-
-    const countHeart = document.getElementById("heart-count");
-     let currentCount = parseInt(countHeart.innerText);
-     currentCount++ ;
-     countHeart.innerText = currentCount;
+function heartTotal(id) {
+     document.getElementById(id).addEventListener('click',function(){
+        document.getElementById(id).style.color = 'red'
+        const currentHeart = document.getElementById("heart-count")
+        let currentCount = parseInt(currentHeart.innerText);
+         currentCount++ ;
+         currentHeart.innerText = currentCount;
 
 })
+}
+heartTotal("heart-click")
+heartTotal("heart-click1")
+heartTotal("heart-click2")
+heartTotal("heart-click3")
+heartTotal("heart-click4")
+heartTotal("heart-click5")
+heartTotal("heart-click6")
+heartTotal("heart-click7")
+heartTotal("heart-click8")
+
 
 // copy button 
 
@@ -30,12 +38,6 @@ document.getElementById("copy-btn").addEventListener('click',function(){
      currentCount++ ;
      countCopy.innerText = currentCount;
 
-})
-
-// call button 
-document.getElementById("call-btn").addEventListener('click',function(e){
-    e.preventDefault()
-    
 })
 
 // Coin reuseable
@@ -67,16 +69,3 @@ coinRemain("call-btn6")
 coinRemain("call-btn7")
 coinRemain("call-btn8")
 
-
-// Coin count remaing
-
-// document.getElementById("call-btn").addEventListener('click',function(){
-
-//     coinRemain("call-btn")
-    
-// })
-
-// document.getElementById("call-btn1").addEventListener('click',function(){
-    
-
-// })
