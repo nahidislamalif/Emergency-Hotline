@@ -6,6 +6,10 @@ function heartCount (id){
 }
 
 
+// heart reuseable 
+function hear
+
+
 document.getElementById("heart-click").addEventListener('click',function(){
 
     document.getElementById("heart-click").style.color = 'red'
