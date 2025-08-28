@@ -1,10 +1,7 @@
 
 let count = 0 ;
 
-function heartCount (id){
-
-}
-
+const history = [] ;
 
 // heart reuseable 
 
@@ -90,4 +87,45 @@ coinRemain("call-btn5" ,"emergency-title5", "emergency-number5")
 coinRemain("call-btn6" ,"emergency-title6", "emergency-number6")
 coinRemain("call-btn7" ,"emergency-title7", "emergency-number7")
 coinRemain("call-btn8" ,"emergency-title8", "emergency-number8")
+
+
+// for history clear
+
+document.getElementById("clear-button").addEventListener('click',function(){
+    const contetn = document.getElementById("clear-history")
+    contetn.innerHTML= " " ;
+})
+
+// for adding call history 
+ function addCallHistory(id, newCall, number) {
+    document.getElementById(id).addEventListener("click", function () {
+      const callNew = document.getElementById(newCall).innerText;
+      const newNumber = document.getElementById(number).innerText; 
+      const time = new Date().toLocaleTimeString(); 
+
+      const container = document.getElementById("clear-history");
+
+      const div = document.createElement("div");
+      div.className =
+        "flex justify-between items-center mt-5 p-5 rounded-lg bg-[#FAFAFA]";
+      div.innerHTML = `
+        <div>
+          <p class="text-[18px] font-bold">${callNew}</p>
+          <p>${newNumber}</p>
+        </div>
+        <div class="text-[18px]">${time}</div>
+      `;
+
+      container.appendChild(div);
+    });
+  }
+  addCallHistory("call-btn", "emergency-title", "emergency-number");
+  addCallHistory("call-btn1", "emergency-title1", "emergency-number1");
+  addCallHistory("call-btn2", "emergency-title2", "emergency-number2");
+  addCallHistory("call-btn3", "emergency-title3", "emergency-number3");
+  addCallHistory("call-btn4", "emergency-title4", "emergency-number4");
+  addCallHistory("call-btn5", "emergency-title5", "emergency-number5");
+  addCallHistory("call-btn6", "emergency-title6", "emergency-number6");
+  addCallHistory("call-btn7", "emergency-title7", "emergency-number7");
+  addCallHistory("call-btn8", "emergency-title8", "emergency-number8");
 
