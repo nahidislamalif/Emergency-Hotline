@@ -1,7 +1,7 @@
 
 let count = 0 ;
 
-const history = [] ;
+
 
 // heart reuseable 
 
@@ -24,6 +24,7 @@ heartTotal("heart-click5")
 heartTotal("heart-click6")
 heartTotal("heart-click7")
 heartTotal("heart-click8")
+            
 
 
 // copy button reuseable
@@ -64,7 +65,6 @@ function coinRemain (id,emergency,number1){
         alert("You don't have enough Coin")
         return ;
     }
-    // alert("Calling to the police")
 
     let currentCoin = parseInt(remainingCoin.innerText)
     currentCoin-= 20 ;

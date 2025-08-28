@@ -2,5 +2,6 @@
     .responsive {
         display: flex;
         flex-direction: column;
+        width: full;
     }
 }
